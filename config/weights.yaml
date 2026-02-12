@@ -1,0 +1,8 @@
+severity_weights:
+  alpha: 0.40   # exploitability
+  beta: 0.40    # impact
+  gamma: 0.20   # exposure
+dependency:
+  lambda: 0.10
+  max_iter: 3
+  normalize: true

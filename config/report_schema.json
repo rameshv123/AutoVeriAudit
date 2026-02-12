@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AutoVeriAudit Contract Report Schema",
+  "type": "object",
+  "required": [
+    "meta",
+    "findings"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "vuln_id",
+          "contract_id",
+          "vtype",
+          "severity",
+          "label"
+        ],
+        "properties": {
+          "vuln_id": {
+            "type": "string"
+          },
+          "contract_id": {
+            "type": "string"
+          },
+          "vtype": {
+            "type": "string"
+          },
+          "function": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "number"
+          },
+          "label": {
+            "type": "string"
+          },
+          "trace": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "features": {
+            "type": "object"
+          },
+          "score_breakdown": {
+            "type": "object"
+          },
+          "remediation": {
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

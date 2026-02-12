@@ -1,0 +1,12 @@
+pipeline:
+  max_workers: 4
+  executor: "thread"          # thread|process
+  input_extensions: [".sol", ".txt"]
+  output_formats: ["pdf", "html", "json"]
+  include_dashboard: true
+  include_benchmarks: true
+  strict_schema: false
+reporting:
+  project_name: "AutoVeriAudit"
+  include_execution_traces: true
+  include_score_breakdown: true
