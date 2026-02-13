@@ -33,23 +33,25 @@ AutoVeriAudit/
 │
 
 ├── core/
-│   ├── ingestion/        # Contract loading and scheduling
 
-│   ├── verification/     # VeriChain interface wrapper
+│       ├── ingestion/        # Contract loading and scheduling
 
-│   ├── analysis/         # Feature extraction and aggregation
+│       ├── verification/     # VeriChain interface wrapper
 
-│   ├── scoring/          # Severity modeling and classification
+│       ├── analysis/         # Feature extraction and aggregation
 
-│   ├── remediation/      # Knowledge base and fix engine
+│       ├── scoring/          # Severity modeling and classification
 
-│   ├── reporting/        # Report and dashboard generation
+│       ├── remediation/      # Knowledge base and fix engine
 
-│   └── benchmarking/     # Runtime evaluation tools
+│       ├── reporting/        # Report and dashboard generation
+
+│       └── benchmarking/     # Runtime evaluation tools
 │
 
 ├── pipeline/
-│   └── run_pipeline.py   # Main execution workflow
+
+│       └── run_pipeline.py   # Main execution workflow
 │
 
 ├── config/               # Thresholds, weights, schema
