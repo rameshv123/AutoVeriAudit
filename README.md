@@ -80,12 +80,19 @@ AutoVeriAudit/
 ##  ⚙️ Installation
 
 Create a virtual environment and install dependencies:
+
 python -m venv .venv
+
 Windows:
+
 .venv\Scripts\activate
+
 Linux/Mac:
+
 source .venv/bin/activate
+
 Install requirements:
+
 pip install -r requirements.txt
 
 ##  ▶️ Running the Framework
@@ -95,40 +102,54 @@ Execute the automated pipeline:
 python pipeline/run_pipeline.py --contracts_dir data/contracts
 The framework will automatically:
 
-•	Load contracts
+    •	Load contracts
 
-•	Run vulnerability analysis
+    •	Run vulnerability analysis
 
-•	Compute severity scores
+    •	Compute severity scores
 
-•	Generate remediation recommendations
+    •	Generate remediation recommendations
 
-•	Produce reports and dashboard
+    •	Produce reports and dashboard
 
 ##  📊 Output Files
+
 After execution, results will be generated in:
+
 data/outputs/
-Folder	Description
-reports	Contract-level PDF and HTML reports
-dashboards	Portfolio-level analytics dashboard
-json	Machine-readable outputs and manifest
-benchmarks	Runtime performance metrics
+
+    Folder	        Description
+    reports	        Contract-level PDF and HTML reports
+    dashboards	    Portfolio-level analytics dashboard
+    json	          Machine-readable outputs and manifest
+    benchmarks	    Runtime performance metrics
 
 ##  🧠 Verification Engine Integration
+
 The current implementation includes a mock verification adapter for demonstration purposes.
+
 To integrate a real formal verification tool:
+
 Edit:
+
 core/verification/verichain_interface.py
+
 Replace:
+
 run_verification(contract)
+
 with your verification engine’s output logic.
+
 Expected output:
+
 List[Vulnerability]
+
 Each vulnerability should include:
-•	type
-•	location
-•	description
-•	execution trace
+
+    •	type
+    •	location
+    •	description
+    •	execution trace
 
 ##  🔬 Reproducibility and Configuration
 All analytical parameters are externally configurable:
@@ -138,18 +159,23 @@ config/pipeline_config.yaml
 This ensures experiments remain fully reproducible.
 
 ##  📈 Benchmarking Support
+
 AutoVeriAudit automatically records execution timing metrics:
+
 data/outputs/benchmarks/timings.json
+
 These metrics can be used in experimental evaluation sections to report:
-•	scalability
-•	runtime efficiency
-•	automation performance
+
+    •	scalability
+    •	runtime efficiency
+    •	automation performance
 
 ##  🧪 Continuous Integration
+
 The repository includes a GitHub Actions workflow that performs:
-•	Dependency installation
-•	Pipeline smoke testing
-•	Output validation
+    •	Dependency installation
+    •	Pipeline smoke testing
+    •	Output validation
 
 ##  🛡️ Research Scope
 This implementation focuses on automated vulnerability analysis and reporting.
