@@ -152,10 +152,15 @@ Each vulnerability should include:
     •	execution trace
 
 ##  🔬 Reproducibility and Configuration
+
 All analytical parameters are externally configurable:
+
 config/weights.yaml       # Severity scoring weights
+
 config/thresholds.yaml    # Risk classification thresholds
+
 config/pipeline_config.yaml
+
 This ensures experiments remain fully reproducible.
 
 ##  📈 Benchmarking Support
