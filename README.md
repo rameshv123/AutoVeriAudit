@@ -30,7 +30,7 @@ o	JSON (API-ready)
 
 •	Configurable and reproducible pipeline
 
-🧩 System Architecture Overview
+##  🧩 System Architecture Overview
 AutoVeriAudit follows a layered architecture:
 1.	Input Acquisition Layer
 Handles contract ingestion, metadata extraction, and batch scheduling.
@@ -41,7 +41,7 @@ Performs feature extraction, severity modeling, classification, and dependency a
 4.	Reporting and Delivery Layer
 Generates structured reports, dashboards, and machine-readable outputs.
 
-📂 Repository Structure
+##  📂 Repository Structure
 AutoVeriAudit/
 │
 
@@ -77,7 +77,7 @@ AutoVeriAudit/
 
 └── tests/                # Smoke test
 
-⚙️ Installation
+##  ⚙️ Installation
 Create a virtual environment and install dependencies:
 python -m venv .venv
 Windows:
