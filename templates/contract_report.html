@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ meta.project_name }} Report - {{ meta.contract_id }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    .header { margin-bottom: 16px; }
+    .badge { display: inline-block; padding: 2px 8px; border: 1px solid #333; border-radius: 8px; font-size: 12px; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 12px; margin: 12px 0; }
+    .mono { font-family: Consolas, monospace; font-size: 12px; white-space: pre-wrap; }
+    table { border-collapse: collapse; margin-top: 8px; }
+    td { border: 1px solid #ddd; padding: 6px 8px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>{{ meta.project_name }} Security Report</h2>
+    <div>Contract: <b>{{ meta.contract_id }}</b></div>
+    <div>Generated: {{ generated_at }}</div>
+  </div>
+
+  {% for f in findings %}
+  <div class="card">
+    <div><span class="badge">{{ f.label }}</span> <b>{{ f.vtype }}</b> (score={{ "%.2f"|format(f.severity) }})</div>
+    <div>Function: {{ f.function }}</div>
+    <div>Location: {{ f.location }}</div>
+    <div>Description: {{ f.description }}</div>
+
+    {% if meta.include_score_breakdown and f.score_breakdown %}
+    <table>
+      <tr><td>Exploitability</td><td>{{ "%.2f"|format(f.score_breakdown.exploitability) }}</td><td>Weighted</td><td>{{ "%.2f"|format(f.score_breakdown.weighted_exploitability) }}</td></tr>
+      <tr><td>Impact</td><td>{{ "%.2f"|format(f.score_breakdown.impact) }}</td><td>Weighted</td><td>{{ "%.2f"|format(f.score_breakdown.weighted_impact) }}</td></tr>
+      <tr><td>Exposure</td><td>{{ "%.2f"|format(f.score_breakdown.exposure) }}</td><td>Weighted</td><td>{{ "%.2f"|format(f.score_breakdown.weighted_exposure) }}</td></tr>
+    </table>
+    {% endif %}
+
+    {% if f.remediation %}
+      <div style="margin-top:8px;">Fix: <b>{{ f.remediation.title }}</b></div>
+      <div>{{ f.remediation.recommendation }}</div>
+    {% endif %}
+
+    {% if meta.include_execution_traces and f.trace %}
+      <div style="margin-top:8px;">Trace:</div>
+      <div class="mono">{{ f.trace | join("\n") }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ meta.project_name }} Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 12px; }
+  </style>
+</head>
+<body>
+  <h2>{{ meta.project_name }} Portfolio Dashboard</h2>
+  <div>Generated: {{ generated_at }}</div>
+
+  <div class="grid" style="margin-top:12px;">
+    <div class="card">
+      <div><b>Total Contracts</b>: {{ summary.total_contracts }}</div>
+      <div><b>Total Vulnerabilities</b>: {{ summary.total_vulnerabilities }}</div>
+      <div><b>Mean Severity</b>: {{ "%.3f"|format(summary.severity_mean) }}</div>
+      <div><b>Max Severity</b>: {{ "%.3f"|format(summary.severity_max) }}</div>
+    </div>
+
+    <div class="card">
+      <div><b>Risk Label Distribution</b></div>
+      {% for svg in bars_label %}
+        {{ svg | safe }}
+      {% endfor %}
+    </div>
+
+    <div class="card">
+      <div><b>Vulnerability Type Distribution</b></div>
+      {% for svg in bars_type %}
+        {{ svg | safe }}
+      {% endfor %}
+    </div>
+
+    <div class="card">
+      <div><b>Notes</b></div>
+      <div>Dashboard bars are generated directly from batch analytics for reproducible portfolio summaries.</div>
+    </div>
+  </div>
+</body>
+</html>
