@@ -1,5 +1,6 @@
 # AutoVeriAudit
-Automated Vulnerability Analysis and Security Reporting Framework for Blockchain Smart Contracts
+####    Automated Vulnerability Analysis and Security Reporting Framework for Blockchain Smart Contracts
+
 AutoVeriAudit is a research-oriented automated framework designed to enhance smart contract security through structured vulnerability analysis, severity modeling, and automated security reporting. The system integrates verification outputs with intelligent analysis modules to generate explainable risk scores, remediation recommendations, and portfolio-level security insights.
 This repository provides a fully reproducible SCI-ready implementation aligned with formal research methodology, enabling large-scale automated auditing workflows.
 
