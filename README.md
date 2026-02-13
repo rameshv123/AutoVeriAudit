@@ -31,22 +31,35 @@ Generates structured reports, dashboards, and machine-readable outputs.
 📂 Repository Structure
 AutoVeriAudit/
 │
+
 ├── core/
 │   ├── ingestion/        # Contract loading and scheduling
+
 │   ├── verification/     # VeriChain interface wrapper
+
 │   ├── analysis/         # Feature extraction and aggregation
+
 │   ├── scoring/          # Severity modeling and classification
+
 │   ├── remediation/      # Knowledge base and fix engine
+
 │   ├── reporting/        # Report and dashboard generation
+
 │   └── benchmarking/     # Runtime evaluation tools
 │
+
 ├── pipeline/
 │   └── run_pipeline.py   # Main execution workflow
 │
+
 ├── config/               # Thresholds, weights, schema
+
 ├── templates/            # Report templates
+
 ├── data/                 # Contracts and outputs
+
 ├── utils/                # Logging and helper utilities
+
 └── tests/                # Smoke test
 
 ⚙️ Installation
