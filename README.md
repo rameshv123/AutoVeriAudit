@@ -78,6 +78,7 @@ AutoVeriAudit/
 └── tests/                # Smoke test
 
 ##  ⚙️ Installation
+
 Create a virtual environment and install dependencies:
 python -m venv .venv
 Windows:
@@ -87,17 +88,24 @@ source .venv/bin/activate
 Install requirements:
 pip install -r requirements.txt
 
-▶️ Running the Framework
+##  ▶️ Running the Framework
+
 Execute the automated pipeline:
+
 python pipeline/run_pipeline.py --contracts_dir data/contracts
 The framework will automatically:
+
 •	Load contracts
+
 •	Run vulnerability analysis
+
 •	Compute severity scores
+
 •	Generate remediation recommendations
+
 •	Produce reports and dashboard
 
-📊 Output Files
+##  📊 Output Files
 After execution, results will be generated in:
 data/outputs/
 Folder	Description
@@ -106,7 +114,7 @@ dashboards	Portfolio-level analytics dashboard
 json	Machine-readable outputs and manifest
 benchmarks	Runtime performance metrics
 
-🧠 Verification Engine Integration
+##  🧠 Verification Engine Integration
 The current implementation includes a mock verification adapter for demonstration purposes.
 To integrate a real formal verification tool:
 Edit:
@@ -122,14 +130,14 @@ Each vulnerability should include:
 •	description
 •	execution trace
 
-🔬 Reproducibility and Configuration
+##  🔬 Reproducibility and Configuration
 All analytical parameters are externally configurable:
 config/weights.yaml       # Severity scoring weights
 config/thresholds.yaml    # Risk classification thresholds
 config/pipeline_config.yaml
 This ensures experiments remain fully reproducible.
 
-📈 Benchmarking Support
+##  📈 Benchmarking Support
 AutoVeriAudit automatically records execution timing metrics:
 data/outputs/benchmarks/timings.json
 These metrics can be used in experimental evaluation sections to report:
@@ -137,16 +145,16 @@ These metrics can be used in experimental evaluation sections to report:
 •	runtime efficiency
 •	automation performance
 
-🧪 Continuous Integration
+##  🧪 Continuous Integration
 The repository includes a GitHub Actions workflow that performs:
 •	Dependency installation
 •	Pipeline smoke testing
 •	Output validation
 
-🛡️ Research Scope
+##  🛡️ Research Scope
 This implementation focuses on automated vulnerability analysis and reporting.
 Formal verification itself is treated as an external module to maintain modular research design.
 
-📄 Citation
+##  📄 Citation
 If you use this framework in academic work, please cite:
 AutoVeriAudit: An Automated Vulnerability Analysis and Security Reporting Framework for Blockchain Smart Contracts (full paper URL will be provided after publication)
