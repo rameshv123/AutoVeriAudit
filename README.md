@@ -6,30 +6,29 @@ This repository provides a fully reproducible SCI-ready implementation aligned w
 
 ##  🎯 Key Features
 
-•	Automated batch analysis of multiple smart contracts
+    •	Automated batch analysis of multiple smart contracts
 
-•	Feature-based vulnerability severity scoring
+    •	Feature-based vulnerability severity scoring
 
-•	Dependency-aware risk propagation
+    •	Dependency-aware risk propagation
 
-•	Explainable scoring with component breakdown
+    •	Explainable scoring with component breakdown
 
-•	Rule-based remediation recommendation engine
+    •	Rule-based remediation recommendation engine
 
-•	Multi-format report generation:
+    •	Multi-format report generation:
 
+            o	PDF
 
-o	PDF
+            o	HTML
 
-o	HTML
+            o	JSON (API-ready)
 
-o	JSON (API-ready)
+    •	Portfolio-level dashboard analytics
 
-•	Portfolio-level dashboard analytics
+    •	Benchmarking and runtime evaluation
 
-•	Benchmarking and runtime evaluation
-
-•	Configurable and reproducible pipeline
+    •	Configurable and reproducible pipeline
 
 ##  🧩 System Architecture Overview
 AutoVeriAudit follows a layered architecture:
