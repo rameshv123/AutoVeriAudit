@@ -1,0 +1,22 @@
+{
+  "reentrancy": {
+    "title": "Apply Checks-Effects-Interactions and Reentrancy Guard",
+    "recommendation": "Move state updates before external calls; consider ReentrancyGuard; minimize external calls."
+  },
+  "arithmetic_overflow": {
+    "title": "Use Safe Arithmetic and Range Checks",
+    "recommendation": "Use Solidity >=0.8 overflow checks or SafeMath for older versions; validate ranges."
+  },
+  "access_control": {
+    "title": "Enforce Role-Based Access Control",
+    "recommendation": "Restrict privileged functions using onlyOwner/onlyRole modifiers; validate caller permissions."
+  },
+  "unchecked_call": {
+    "title": "Check External Call Return Values",
+    "recommendation": "Always verify low-level call return values; handle failures explicitly."
+  },
+  "dos_gas": {
+    "title": "Mitigate Gas-Related DoS Risks",
+    "recommendation": "Avoid unbounded loops; prefer pull over push; optimize storage writes."
+  }
+}
