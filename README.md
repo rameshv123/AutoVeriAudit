@@ -173,6 +173,7 @@ These metrics can be used in experimental evaluation sections to report:
 ##  🧪 Continuous Integration
 
 The repository includes a GitHub Actions workflow that performs:
+
     •	Dependency installation
     •	Pipeline smoke testing
     •	Output validation
